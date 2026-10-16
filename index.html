@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baloch Bouncer Services (BBS) | Premium Security & Bouncers Sindh Pakistan</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-red: #d90429;
+            --dark-red: #800000;
+            --accent-gold: #ffb703;
+            --bg-main: #0b0e14;
+            --card-bg: #151a23;
+            --card-border: #232a38;
+            --text-light: #f8f9fa;
+            --text-muted: #94a3b8;
+            --whatsapp-green: #25d366;
+            --nav-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(90deg, #110003, var(--dark-red), #110003);
+            color: #fff;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(217, 4, 41, 0.3);
+            position: relative;
+            z-index: 1001;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-info a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s;
+        }
+
+        .top-info a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(11, 14, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 0 8px rgba(217, 4, 41, 0.5));
+        }
+
+        .brand-text h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            color: #fff;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .brand-text h1 span {
+            color: var(--primary-red);
+        }
+
+        .brand-text p {
+            font-size: 10px;
+            color: var(--accent-gold);
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-red);
+            background: rgba(217, 4, 41, 0.1);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            min-height: calc(100vh - var(--nav-height) - 40px);
+        }
+
+        .hero-text h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 38px;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h2 span {
+            color: var(--primary-red);
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-red), #900018);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(217, 4, 41, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(217, 4, 41, 0.6);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .hero-video-card {
+            background: var(--card-bg);
+            border: 2px solid var(--primary-red);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(217, 4, 41, 0.25);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-video-card h4 {
+            color: var(--accent-gold);
+            font-size: 16px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .video-container-box {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            outline: none;
+        }
+
+        /* Section Layouts */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 30px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header h3 span {
+            color: var(--primary-red);
+        }
+
+        .section-header p {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-red);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-icon {
+            font-size: 36px;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* Video Showcase Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-red);
+        }
+
+        .video-player-box {
+            width: 100%;
+            height: 420px;
+            background: #000;
+            cursor: pointer;
+        }
+
+        .video-player-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            outline: none;
+        }
+
+        .video-info {
+            padding: 20px;
+        }
+
+        .video-badge {
+            display: inline-block;
+            background: rgba(217, 4, 41, 0.15);
+            color: var(--primary-red);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .video-info h5 {
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .video-info p {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Booking Form */
+        .booking-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        .booking-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red), var(--accent-gold), var(--primary-red));
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 16px;
+            background: #0d1117;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 10px rgba(217, 4, 41, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #07090d;
+            border-top: 1px solid var(--card-border);
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                position: fixed;
+                top: var(--nav-height);
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - var(--nav-height));
+                background: #0d1117;
+                flex-direction: column;
+                justify-content: center;
+                transition: 0.3s ease;
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div><i class="fa-solid fa-shield-halved"></i> Official Security & Bouncer Vendor in Sindh, Pakistan</div>
+        <div class="top-info">
+            <a href="tel:+923472350645"><i class="fa-solid fa-phone"></i> +92 347 2350645</a>
+            <a href="https://wa.me/923150346701" target="_blank"><i class="fa-brands fa-whatsapp"></i> +92 315 0346701</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="brand-logo">
+                <svg class="logo-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 15L30 50V100C30 145 100 185 100 185C100 185 170 145 170 100V50L100 15Z" fill="#151A23" stroke="#D90429" stroke-width="6"/>
+                    <path d="M100 35C70 35 60 65 60 65C75 60 90 65 90 65C90 65 75 80 70 100C85 90 100 95 100 95C100 95 115 90 130 100C125 80 110 65 110 65C110 65 125 60 140 65C140 65 130 35 100 35Z" fill="#D90429"/>
+                    <circle cx="100" cy="75" r="5" fill="#FFB703"/>
+                </svg>
+                <div class="brand-text">
+                    <h1>BALOCH <span>BOUNCERS</span></h1>
+                    <p>BALOCH BOUNCER SERVICES (BBS)</p>
+                </div>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About Us</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#videos" class="nav-item">Live Events & Videos</a></li>
+                <li><a href="#booking" class="nav-item">Contact / Booking</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>ELITE SINDH <span>BOUNCER & SECURITY</span> SQUAD</h2>
+            <p>Professional Event Bouncers, Armed Guards, and Tactical Security Protocols for Lahooti Melo, Saif Samejo Concerts, Mehran Walk Events, VIP Protocol & Weddings Across Sindh.</p>
+            <div class="btn-group">
+                <a href="#booking" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Book Security Now</a>
+                <a href="https://wa.me/923150346701?text=Hello%20BBS%20Team,%20I%20want%20to%20inquire%20about%20bouncer%20booking%20services." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="hero-video-card">
+            <h4>Featured Event Security Action</h4>
+            <div class="video-container-box">
+                <video controls playsinline preload="auto">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <h3>ABOUT <span>BALOCH BOUNCER SERVICES</span></h3>
+            <p>Premier Security & Crowd Management Agency in Sindh</p>
+        </div>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 16px;">
+            Baloch Bouncer Services (BBS) provides top-tier physical protection, expert crowd handling, trained event bouncers, and VIP security across Karachi, Hyderabad, Jamshoro, Sukkur, Larkana, and interior Sindh. We have successfully managed major cultural gatherings like Lahooti Melo, celebrity musical concerts with Saif Samejo, Mehran Walk festivals, and high-profile wedding events.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <h3>OUR SPECIALIZED <span>SERVICES</span></h3>
+            <p>Tailored Protection Solutions Across Sindh</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-user-shield service-icon"></i>
+                <h4>Male & Female Bouncers</h4>
+                <p>Physically trained, tall, and disciplined bouncers for guest management, gate security, and crowd control at concerts and cultural festivals.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-gun service-icon"></i>
+                <h4>Armed Tactical Gunmen</h4>
+                <p>Licensed armed guards with personal defense weapons for high-risk protection, celebrity escorts, and secure transit across Sindh highways.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-person-military-rifle service-icon"></i>
+                <h4>Static Security Guards</h4>
+                <p>Uniformed and vigilant guards for corporate offices, commercial plazas, hotels, and university campus events.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-car-side service-icon"></i>
+                <h4>VIP Escort Protocol</h4>
+                <p>Specialized mobile escort security units for VIPs, artists, and dignitaries visiting interior Sindh venues.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Events & Direct Video Showcase Section -->
+    <section class="section" id="videos">
+        <div class="section-header">
+            <h3>LIVE EVENTS & <span>SECURITY VIDEOS</span></h3>
+            <p>Lahooti Melo, Saif Samejo Concerts, Bouncer Ops & Mehran Walk Sindh</p>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Cultural Festival</span>
+                    <h5>Lahooti Melo Security Deployment</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Jamshoro, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Festival Crowd Control</span>
+                    <h5>Lahooti Melo Main Stage Management</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Jamshoro, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Artist Protection</span>
+                    <h5>Saif Samejo Live Concert Protocol</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Hyderabad, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoy.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Elite Bouncers</span>
+                    <h5>BBS Tactical Team Action</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Karachi, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">VIP Security</span>
+                    <h5>Event Entry & Gate Control</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Sukkur, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Bouncer Squad</span>
+                    <h5>Professional Guard Readiness</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Larkana, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Security Protocol</span>
+                    <h5>Backstage & Stage Protection</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Nawabshah, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Mehran Walk</span>
+                    <h5>Mehran Walk Security Escort</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Hyderabad, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Mehran Walk</span>
+                    <h5>Public Event Management</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Jamshoro, Sindh</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-player-box">
+                    <video controls playsinline preload="auto">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-badge">Mehran Walk</span>
+                    <h5>VIP Walkway Protection</h5>
+                    <p><i class="fa-solid fa-location-dot"></i> Hyderabad, Sindh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="section" id="booking">
+        <div class="section-header">
+            <h3>BOOK YOUR <span>SECURITY TEAM</span></h3>
+            <p>Fast Formspree Online Booking Confirmation</p>
+        </div>
+
+        <div class="booking-container">
+            <form id="bbsBookingForm" action="https://formspree.io/f/xzedbzwa" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Client / Party Name *</label>
+                        <input type="text" id="name" name="Client_Name" placeholder="e.g. Ali Khan / Festival Organizer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp *</label>
+                        <input type="tel" id="phone" name="Phone_Number" placeholder="+92 300 1234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="_replyto" placeholder="client@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Required Security Type *</label>
+                        <select id="service" name="Security_Type" required>
+                            <option value="">Select Option...</option>
+                            <option value="Male Bouncers">Male Event Bouncers</option>
+                            <option value="Female Bouncers">Female Event Bouncers</option>
+                            <option value="Armed Gunmen">Armed Tactical Gunmen</option>
+                            <option value="Security Guards">Static Security Guards</option>
+                            <option value="VIP Convoy Protocol">VIP Escort Protocol</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="count">Total Staff Count *</label>
+                        <input type="number" id="count" name="Staff_Count" min="1" placeholder="e.g. 10 Bouncers" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Event City / Venue in Sindh *</label>
+                        <input type="text" id="city" name="Event_City" placeholder="e.g. Hyderabad / Jamshoro / Karachi" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="details">Event Details & Timings</label>
+                        <textarea id="details" name="Event_Details" rows="4" placeholder="Mention concert/festival name, date, timing hours, and special security requirements..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 15px;">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="brand-text">
+                <h1>BALOCH <span>BOUNCERS</span></h1>
+                <p>Official Armed & Event Security Vendor in Sindh, Pakistan</p>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#videos">Live Videos</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="https://esspakistan.com/" target="_blank">ESS Pakistan Partner</a></li>
+            </ul>
+
+            <p style="font-size: 12px; color: var(--text-muted);">&copy; 2026 Baloch Bouncer Services (BBS). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Click-to-Play Video Support -->
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Force video playback support on mobile touch/click
+        document.querySelectorAll('.video-player-box').forEach(box => {
+            const video = box.querySelector('video');
+            box.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
